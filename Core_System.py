@@ -11,19 +11,16 @@ products = [
 ]
 
 def search_products(query):
-    # Simple search function
     results = [p for p in products if query.lower() in p['name'].lower()]
     return "\n".join([f"{p['name']} - {p['category']}" for p in results])
 
 def get_product_details(product_id):
-    # Get details for a specific product
     product = next((p for p in products if p['id'] == product_id), None)
     if product:
         return f"Name: {product['name']}\nCategory: {product['category']}"
     return "Product not found"
 
 def recommend_items(product_id):
-    # Simple recommendation based on category
     product = next((p for p in products if p['id'] == product_id), None)
     if product:
         category = product['category']
@@ -32,12 +29,11 @@ def recommend_items(product_id):
     return "No recommendations available"
 
 def cold_start_recommend(keywords):
-    # Simple recommendation for new users based on keywords
     keyword_list = [k.strip().lower() for k in keywords.split(',')]
     recommendations = [p for p in products if any(k in p['name'].lower() or k in p['category'].lower() for k in keyword_list)]
     return "\n".join([p['name'] for p in recommendations])
 
-# Gradio interface
+
 with gr.Blocks() as demo:
     gr.Markdown("# Restaurant Recommendation System Demo")
     
