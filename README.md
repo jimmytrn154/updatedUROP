@@ -8,7 +8,8 @@
  Our framework is built upon two essential components centered around keywords: **candidates retrieval** focusing on retrieving relevant restaurants and **LLM-ranker** which leverages LLM to re-rank the retrieved candidates.
  
  ## 🚀 Quick Start
- Installation
+ **Installation**
+ 
     We recommend installing Gradio using pip, which is included by default in Python. Run this in your terminal or command prompt:
    
    ```bash
@@ -16,7 +17,7 @@
    ```
 Now, run your code. If you've written the Python code in a file named, for example [app.py] then you would run [python app.py] from the terminal.
 
-CORE STRUCTURE
+**Core Structure**
 
 **Candidate Retrieval**: We use sentence embeddings to compute similarity between the query and products. The `candidates_retrieval` function returns the top-k most similar products.
 
