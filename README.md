@@ -15,3 +15,10 @@
    pip install gradio
    ```
 Now, run your code. If you've written the Python code in a file named, for example, [app.py], then you would run [python app.py] from the terminal.
+
+
+Some Note!!!
+- Search: Allows users to search for products.
+- Product Details: Displays details for a specific product based on its ID.
+- Recommendations: Provides recommendations based on a product ID.
+- Cold Start Recommendations: Offers recommendations for new users based on keywords.
