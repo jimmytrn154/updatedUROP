@@ -14,7 +14,7 @@
    ```bash
    pip install gradio
    ```
-Now, run your code. If you've written the Python code in a file named, for example, [app.py], then you would run [python app.py] from the terminal.
+Now, run your code. If you've written the Python code in a file named, for example [app.py] then you would run [python app.py] from the terminal.
 
 
 Some Note!!!
