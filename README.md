@@ -5,7 +5,7 @@
 
 ## 🛍️ Keyword-driven Retrieval-Augmented Large Language Models for Cold-start User Recommendations
 
- Our framework is built upon two essential components centered around keywords: candidates retrieval focusing on **retrieving relevant restaurants** and **LLM-ranker** which leverages LLM to re-rank the retrieved candidates.
+ Our framework is built upon two essential components centered around keywords: **candidates retrieval** focusing on retrieving relevant restaurants and **LLM-ranker** which leverages LLM to re-rank the retrieved candidates.
  
  ## 🚀 Quick Start
  Installation
