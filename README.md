@@ -1,5 +1,4 @@
-# KALM4Rec
-Web Demo for KALM4Rec Framework 
+
 # KALM4Rec
 
 **KALM4Rec** aims to tackle  the cold-start recommendation problem (where users lack historical data) by requiring only a few input keywords from users in a practical scenario of cold-start user restaurant recommendations. 
