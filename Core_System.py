@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 from typing import List, Dict
 
-# Simulated database of products with pre-computed embeddings
+
 products = [
     {"id": 1, "name": "Spaghetti Carbonara", "category": "Italian", "description": "Creamy pasta dish with eggs, cheese, and pancetta"},
     {"id": 2, "name": "Sushi Platter", "category": "Japanese", "description": "Assorted fresh fish and rice rolls"},
@@ -13,10 +13,9 @@ products = [
     {"id": 5, "name": "Chicken Tikka Masala", "category": "Indian", "description": "Tender chicken in a creamy tomato-based sauce"}
 ]
 
-# Load a pre-trained sentence transformer model
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
-# Pre-compute embeddings for all products
+
 for product in products:
     product['embedding'] = model.encode(product['name'] + " " + product['description'])
 
@@ -27,8 +26,8 @@ def candidates_retrieval(query: str, k: int = 3) -> List[Dict]:
     return [products[i] for i in top_k_indices]
 
 def llm_ranker(query: str, candidates: List[Dict]) -> List[Dict]:
-    # Simulate LLM ranking with a simple scoring function
-    # In a real scenario, you would call an actual LLM API here
+    # Simulate LLM ranking with a simple scoring function!!!
+    # In a real scenario, we will call an actual LLM API here!!!
     def score_candidate(candidate):
         relevance = sum(1 for word in query.lower().split() if word in candidate['name'].lower() or word in candidate['description'].lower())
         return relevance * np.random.random()  # Add some randomness to simulate LLM behavior
@@ -60,7 +59,7 @@ def cold_start_recommend(keywords):
     recommendations = candidates_retrieval(keywords, k=5)
     return "\n".join([f"{p['name']} - {p['category']}\n{p['description']}\n" for p in recommendations])
 
-# Gradio interface
+
 with gr.Blocks() as demo:
     gr.Markdown("# Enhanced Restaurant Recommendation System Demo")
     
