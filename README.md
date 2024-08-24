@@ -3,7 +3,8 @@
 
 **KALM4Rec** aims to tackle  the cold-start recommendation problem (where users lack historical data) by requiring only a few input keywords from users in a practical scenario of cold-start user restaurant recommendations. [[paper]](https://arxiv.org/pdf/2405.19612) 
 
-![](Picture.png)
+![Picture](https://github.com/user-attachments/assets/2a0abebb-e43a-4816-8c26-be64a7071623)
+
 
 ## 🛍️ Keyword-driven Retrieval-Augmented Large Language Models for Cold-start User Recommendations
 
