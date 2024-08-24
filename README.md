@@ -21,6 +21,7 @@
 Now, run your code. If you've written the Python code in a file named, for example [app.py] then you would run [python app.py] from the terminal.
 
 **Core Structure**
+
 **Keyword Processing**: The `extract_keywords` function simulates keyword extraction from user reviews.
 
 **Retrieval Model**: The `retrieve_candidates` function uses embeddings to find similar restaurants based on keywords.
