@@ -21,12 +21,13 @@
 Now, run your code. If you've written the Python code in a file named, for example [app.py] then you would run [python app.py] from the terminal.
 
 **Core Structure**
+**Keyword Processing**: The `extract_keywords` function simulates keyword extraction from user reviews.
+**Retrieval Model**: The `retrieve_candidates` function uses embeddings to find similar restaurants based on keywords.
 
-**Candidate Retrieval**: We use sentence embeddings to compute similarity between the query and products. The `candidates_retrieval` function returns the top-k most similar products.
+**KALM4REC**:
+ - The `generate_prompt` function creates a prompt that includes user keywords and restaurant information.
 
-**LLM Ranker**: The `llm_ranker` function simulates an LLM-based ranking system. In a real-world scenario, we will replace this with an actual call to an **LLM API** for more sophisticated ranking.
-
-**Enhanced Search**: The `search_and_rank` function combines candidate retrieval and LLM ranking to provide more relevant results.
+ - The `llm_rerank` function simulates the re-ranking process using the generated prompt.
 
 
 Some Note!!!
