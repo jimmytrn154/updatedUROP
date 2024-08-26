@@ -2,11 +2,8 @@ import gradio as gr
 import random
 from sentence_transformers import SentenceTransformer
 import numpy as np
-
-# Load a pre-trained sentence transformer model
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
-# Simulated database of restaurants
 restaurants = [
     {"id": 1, "name": "Pasta Paradise", "cuisine": "Italian", "keywords": ["pasta", "cozy", "romantic"]},
     {"id": 2, "name": "Sushi Sensation", "cuisine": "Japanese", "keywords": ["sushi", "fresh", "modern"]},
@@ -15,7 +12,6 @@ restaurants = [
     {"id": 5, "name": "Mediterranean Delight", "cuisine": "Mediterranean", "keywords": ["healthy", "seafood", "outdoor seating"]}
 ]
 
-# Pre-compute embeddings for all restaurants
 for restaurant in restaurants:
     restaurant['embedding'] = model.encode(" ".join(restaurant['keywords']))
 
@@ -34,7 +30,6 @@ def generate_prompt(user_keywords, restaurant):
     return f"User keywords: {', '.join(user_keywords)}\nRestaurant: {restaurant['name']}\nCuisine: {restaurant['cuisine']}\nKeywords: {', '.join(restaurant['keywords'])}"
 
 def llm_rerank(candidates, prompt):
-    # Simulate LLM re-ranking with a simple scoring function
     def score_candidate(candidate, user_keywords):
         return sum(1 for keyword in user_keywords if keyword in candidate['keywords'])
     
@@ -54,7 +49,6 @@ def recommend_restaurants(user_review, is_cold_start=False):
     
     return "\n\n".join([f"Name: {r['name']}\nCuisine: {r['cuisine']}\nKeywords: {', '.join(r['keywords'])}" for r in ranked_results])
 
-# Gradio interface
 with gr.Blocks() as demo:
     gr.Markdown("# KALM4REC-inspired Restaurant Recommendation Demo")
     
