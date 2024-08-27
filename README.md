@@ -16,7 +16,7 @@
   We recommend installing Gradio using pip, which is included by default in Python. Run this in your terminal or command prompt:
  
    ``` 
-   pip install gradio numpy sentence-transformers
+   pip install gradio numpy sentence-transformers tf-keras
    ```
 Now, run your code. If you've written the Python code in a file named, for example [app.py] then you would run [python app.py] from the terminal.
 
