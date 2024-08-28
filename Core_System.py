@@ -16,7 +16,6 @@ for restaurant in restaurants:
     restaurant['embedding'] = model.encode(" ".join(restaurant['keywords']))
 
 def extract_keywords(review):
-    # Simple keyword extraction (in a real scenario, use NLP techniques)
     words = review.lower().split()
     return [word for word in words if len(word) > 3]
 
