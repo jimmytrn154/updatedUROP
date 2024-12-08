@@ -1,0 +1,12 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directories
+shit/
+env/
+*.egg-info/
+
+# Ignore any other specific directories or files
+# For example, if you have a folder named 'packages'
+packages/
